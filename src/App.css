@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: #e6edef;
+}
+section{
+  max-width: 1440px;
+  margin: auto;
+}
+
+.font__bruno__ace{
+  font-family: 'Bruno Ace SC', cursive;
+}
