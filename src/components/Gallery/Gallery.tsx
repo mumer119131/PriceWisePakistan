@@ -1,9 +1,7 @@
-import { useEffect, useState } from "react"
-import { getProductsApi } from "../../Api/Api.js"
 import GalleryItem from "../GalleryItem/GalleryItem.js"
 
 interface GalleryProps{
-    query: string
+    products : Product[]
 }
 interface Product{
     id: number,
@@ -16,18 +14,7 @@ interface Product{
 }
 
 const Gallery = (props : GalleryProps) => {
-  const { query } = props
-  const [products, setProducts] = useState<Product[]>([])
-
-  const getProducts = async () => {
-    const response = await getProductsApi()
-    console.log(response)
-    setProducts(response.data)
-  }
-
-  useEffect(()=>{
-    getProducts()
-  },[])
+  const {products} = props
   return (
     <div className="flex flex-wrap gap-8 p-2 justify-center">
         {

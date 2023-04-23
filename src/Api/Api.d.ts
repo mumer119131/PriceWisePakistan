@@ -12,5 +12,16 @@ interface apiResponse{
     products : Product[]
 }
 export module "./Api.js" {
-    export function getProductsApi(): Object<apiResponse>;
+    export function getProductsApi(): Product<apiResponse>;
+}
+
+export module "./Api.js" {
+    export function getProductCategoriesApi() : Unknown<apiResponse>;
+}
+
+export module "./Api.js" {
+    export function getProductsByCategoryApi(category: string) : Unknown<apiResponse>;
+}
+export module "./Api.js" {
+    export function getProductsWithDetailByCategory() : Unknown<apiResponse>;
 }

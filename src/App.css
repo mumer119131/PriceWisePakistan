@@ -10,10 +10,12 @@
 body{
   background-color: #e6edef;
   min-width: 390px;
+  position: relative;
 }
 section{
   max-width: 1440px;
   margin: auto;
+  padding: 0 1rem;
 }
 
 .font__bruno__ace{
@@ -32,4 +34,10 @@ section{
 
 .transition__custom{
   transition: all 0.3s ease-in-out;
+}
+
+.shadow__custom:hover{
+  box-shadow: 10px 10px 173px 1px ;
+  -webkit-box-shadow: 10px 10px 173px 1px;
+  -moz-box-shadow: 10px 10px 173px 1px;
 }

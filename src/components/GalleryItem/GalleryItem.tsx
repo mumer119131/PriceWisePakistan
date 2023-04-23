@@ -9,9 +9,10 @@ interface Product{
 }
 const GalleryItem = (props : Product) => {
   return (
-    <div className="bg-white w-[17rem] rounded-[1rem] pb-[2rem] transition-all shadow-lg cursor-pointer">
+    <div className="bg-white w-[17rem] rounded-[1rem] pb-[2rem] transition-all shadow-lg cursor-pointer hover:shadow-primary hover:shadow-2xl hover:translate-y-[-10px]">
         <a href={props.product_url} target="_blank">
-            <img src={props.product_img_url} alt={props.product_name} className="h-22 w-[17rem] object-cover px-2"/>
+              {/* lazy load image */}
+            <img src={props.product_img_url} loading="lazy" alt={props.product_name} className="h-22 w-[17rem] object-cover px-2"/>
         </a>
         <a href={props.product_url} target="_blank" className="px-4 block">
             <h3 className="text-lg font-bold overflow-hidden whitespace-nowrap overflow-ellipsis">{props.product_name}</h3>

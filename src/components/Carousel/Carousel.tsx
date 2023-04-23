@@ -17,7 +17,7 @@ const Carousel = () => {
         exit: { x: selectedImage > 0 ? '-100%' : '100%', opacity: 0 }
       };
   return (
-    <div className="px-8 flex items-center flex-col mt-4 relative">
+    <div className="px-8 flex items-center flex-col mt-4 relative mb-4">
         <AnimatePresence mode="wait">
             <motion.img 
                 key={selectedImage}
@@ -26,7 +26,7 @@ const Carousel = () => {
                 exit="exit"
                 variants={imageVariants}
                 transition={{ duration: 0.01 }}
-                className="rounded-[1rem] shadow-lg mask w-[95%] md:w-[90%] lg:w-[95%] h-[8rem] md:h-[10rem] lg:h-[32rem] transition__custom object-cover" src={images[selectedImage]} alt="" />
+                className="rounded-[1rem] shadow-lg mask w-[100%] md:w-[100%] lg:w-[100%] h-[15rem] md:h-[25rem] lg:h-[32rem] transition__custom object-cover" src={images[selectedImage]} alt="" />
         </AnimatePresence>
         <div className="flex gap-2 absolute bottom-2">
             <button onClick={() => setSelectedImage(0)} className={`w-4 h-4 rounded-full bg-primary ${selectedImage === 0 ? 'opacity-100' : 'opacity-50'}`}></button>
