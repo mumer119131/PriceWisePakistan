@@ -9,6 +9,7 @@
 
 body{
   background-color: #e6edef;
+  min-width: 390px;
 }
 section{
   max-width: 1440px;
@@ -17,4 +18,18 @@ section{
 
 .font__bruno__ace{
   font-family: 'Bruno Ace SC', cursive;
+}
+
+.mask {
+  
+  /* Create a linear gradient that goes from black to transparent */
+  background-image: linear-gradient(to top, black, white);
+  
+  /* Apply the mask to the element */
+  -webkit-mask-image: linear-gradient(to top, black, white);
+  mask-image: linear-gradient(to top, black, white);
+}
+
+.transition__custom{
+  transition: all 0.3s ease-in-out;
 }
